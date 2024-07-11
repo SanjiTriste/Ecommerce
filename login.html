@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Loja Online</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+
+        /* Base para layout responsivo */
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            padding: 20px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navegação */
+        nav {
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            /* Centraliza os itens da navegação */
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #01579b;
+            /* Mudança de cor no hover */
+        }
+
+        /* Conteúdo principal */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #FFD700;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        form input[type="email"],
+        form input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #FFD700;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #FFD700;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        p a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            color: white;
+            /* Cor do texto */
+            text-decoration: none;
+            /* Remover sublinhado dos links */
+        }
+
+        .nav-link img {
+            width: 20px;
+            /* Ajuste o tamanho dos ícones conforme necessário */
+            height: auto;
+            /* Mantém a proporção */
+            margin-right: 5px;
+            /* Espaçamento à direita dos ícones */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav justify-content-around"> <!-- Utilizei justify-content-around para espaçar uniformemente -->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php"><img src="assets/images/icons/casa.png" alt="">
+                        <span>Início</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categorias.html"><img src="assets/images/icons/menu.png" alt="">
+                        <span>Categorias</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><img src="assets/images/icons/login.png" alt="">
+                        <span>Login</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carrinho.php"><img src="assets/images/icons/carrinho.png" alt="">
+                        <span>Carrinho</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Login</h2>
+        <form id="form-login" method="POST" action="backend/login.php">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="registro.html">Registre-se aqui</a>.</p>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

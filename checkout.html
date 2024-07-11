@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Loja Online</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+    .nav-link {
+        display: flex;
+        align-items: center;
+        color: white; /* Cor do texto */
+        text-decoration: none; /* Remover sublinhado dos links */
+    }
+
+    .nav-link img {
+        width: 20px; /* Ajuste o tamanho dos ícones conforme necessário */
+        height: auto; /* Mantém a proporção */
+        margin-right: 5px; /* Espaçamento à direita dos ícones */
+    }</style>
+</head>
+<body>
+    <header>
+        <h1>Loja Online</h1>
+        <nav>
+            <ul class="nav justify-content-around"> <!-- Utilizei justify-content-around para espaçar uniformemente -->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php"><img src="assets/images/icons/casa.png" alt=""> <span>Início</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categorias.html"><img src="assets/images/icons/menu.png" alt=""> <span>Categorias</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><img src="assets/images/icons/login.png" alt=""> <span>Login</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carrinho.php"><img src="assets/images/icons/carrinho.png" alt=""> <span>Carrinho</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Checkout</h2>
+        <form id="form-checkout" method="POST" action="backend/pedido.php">
+            <label for="endereco">Endereço de Entrega:</label>
+            <input type="text" id="endereco" name="endereco" required>
+            <button type="submit">Finalizar Compra</button>
+        </form>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

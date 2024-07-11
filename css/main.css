@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+/* Estilos base */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Fundo preto */
+  color: #FFD700; /* Dourado */
+}
+
+.anton-sc-regular {
+  font-family: "Anton SC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #C0C0C0; /* Prata */
+}
+
+/* Base para layout responsivo */
+.container {
+  width: 95%;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #FFD700; /* Dourado */
+  color: #000; /* Preto */
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Navegação */
+nav {
+  padding: 0.1rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #C0C0C0; /* Prata */
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #FFD700; /* Dourado no hover */
+}
+
+/* Conteúdo principal */
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #FFD700; /* Dourado */
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #C0C0C0; /* Prata */
+}
+
+/* Produtos em destaque */
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.produto {
+  border: 1px solid #FFD700; /* Borda dourada */
+  margin: 10px;
+  padding: 10px;
+  width: calc(25% - 20px); /* Calcula a largura com margens */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(255, 215, 0, 0.5); /* Sombra dourada */
+  transition: transform 0.2s;
+  background-color: #000; /* Fundo preto */
+}
+
+.produto:hover {
+  transform: scale(1.05);
+}
+
+.produto img {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Ajusta a imagem dentro do contêiner */
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.produto h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #FFD700; /* Dourado */
+}
+
+.produto p {
+  color: #C0C0C0; /* Prata */
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.produto .preco {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  color: #C0C0C0; /* Prata */
+}
+
+.produto .detalhes {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #C0C0C0; /* Prata */
+  text-align: center;
+  display: block; /* Para garantir que o link ocupe a linha inteira */
+}
+
+.produto a {
+  text-decoration: none;
+  color: #C0C0C0; /* Prata */
+  font-weight: bold;
+}
+
+.btn-adicionar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FFD700; /* Dourado */
+  color: #000; /* Preto */
+  text-decoration: none;
+  border: none;
+  border-radius: 10px; /* Bordas mais arredondadas */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(255, 215, 0, 0.5); /* Sombra dourada */
+}
+
+.btn-adicionar:hover {
+  background-color: #C0C0C0; /* Prata no hover */
+  color: #000; /* Preto */
+  box-shadow: 0 4px 8px rgba(192, 192, 192, 0.5); /* Sombra prata no hover */
+}
+
+.btn-adicionar:active {
+  background-color: #333; /* Preto mais escuro no active */
+  box-shadow: 0 2px 4px rgba(255, 215, 0, 0.5); /* Sombra dourada */
+}
+
+/* Estilos específicos para o Carrinho de Compras */
+.carrinho-container {
+  background-color: #000; /* Fundo preto */
+  border: 1px solid #C0C0C0; /* Borda prata */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(192, 192, 192, 0.5); /* Sombra prata */
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.carrinho-item button {
+  background-color: #FFD700; /* Dourado */
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.carrinho-item button:hover {
+  background-color: #FFC107; /* Cor dourada mais escura */
+}
+
+.limpar-carrinho {
+  background-color: #C62828; /* Vermelho */
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: block;
+}
+
+.limpar-carrinho:hover {
+  background-color: #B71C1C; /* Vermelho mais escuro */
+}
+
+.carrinho-container h2 {
+  color: #FFD700; /* Dourado */
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.produto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #FFD700; /* Borda dourada */
+  padding: 10px 0;
+}
+
+.produto img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.produto .nome {
+  font-weight: bold;
+  color: #FFD700; /* Dourado */
+}
+
+.produto .preco {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  color: #C0C0C0; /* Prata */
+}
+
+.produto .acoes {
+  display: flex;
+  align-items: center;
+}
+
+.produto .acoes button {
+  padding: 8px 15px;
+  background-color: #FFD700; /* Dourado */
+  color: #000; /* Preto */
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+
+.produto .acoes button:hover {
+  background-color: #C0C0C0; /* Prata no hover */
+}
+
+.limpar {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.limpar button {
+  padding: 10px 20px;
+  background-color: #FFD700; /* Dourado */
+  color: #000; /* Preto */
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.limpar button:hover {
+  background-color: #C0C0C0; /* Prata no hover */
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  nav {
+    justify-content: flex-end;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .produtos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produto {
+    width: 90%;
+  }
+
+  .carrinho-container {
+    padding: 10px;
+    margin: 10px;
+  }
+}
